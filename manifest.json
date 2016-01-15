@@ -1,0 +1,23 @@
+{
+	"name": "Acme",
+	"manifest_version": 2,
+	"description": "Sample Demo",
+	"version": "0.1",
+	"background": {
+      "scripts": ["background.js"]
+    },
+	"page_action": {
+		"default_icon": "acme.png",
+		"default_title": "Clicked Me"
+	},
+    "content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+			"js": ["script.js"]
+		}
+	],
+  "web_accessible_resources": ["menu.png","Sidebar-Menu.png","sample.jpg"],
+	"permissions": [
+		"tabs"
+	]
+}
